@@ -1,0 +1,6 @@
+<form #replyForm="ngForm" class="reply-form" (ngSubmit)="replyToTweet(replyForm)">
+    <textarea name="content" id="content" class="content form-control" placeholder="Reply to this tweet..." ngModel required></textarea>
+    <input type="hidden" [ngModel]="repliedBy" name="repliedBy" />
+    <input type="hidden" [ngModel]="tweetId" name="tweetId" />
+    <button class="btn btn-primary text-accent submit" [disabled]="!replyForm.valid">Reply</button>
+</form>

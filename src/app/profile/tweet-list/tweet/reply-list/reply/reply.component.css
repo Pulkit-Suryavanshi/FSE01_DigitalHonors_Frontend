@@ -1,0 +1,12 @@
+.reply{
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--clr-form-control-border);
+}
+.replied-by{
+    color: var(--clr-form-control-border);
+}
+.profile-link{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

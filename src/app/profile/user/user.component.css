@@ -1,0 +1,9 @@
+.user-details{
+    width: 50vw;
+}
+.name,.username{
+    display: inline-block;
+}
+p{
+    font-size: 1.2rem;
+}

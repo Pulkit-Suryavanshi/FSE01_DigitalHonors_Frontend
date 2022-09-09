@@ -1,0 +1,4 @@
+<div class="reply">
+    <h4 class="content">{{ reply?.['content'] }}</h4>
+    <h5 class="replied-by"><a class="profile-link" [routerLink]="['/profile', reply?.['repliedBy']]">{{ reply?.['repliedBy'] }}</a> replied</h5>
+</div>

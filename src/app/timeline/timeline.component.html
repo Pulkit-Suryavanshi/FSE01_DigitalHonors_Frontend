@@ -1,0 +1,6 @@
+<loader *ngIf="isLoading"></loader>
+<div *ngIf="!isLoading">
+<tweet-form [action]="'Post'" [username]="username"></tweet-form>
+<h2>Tweets by all</h2>
+<tweet-list [tweets]="tweets"></tweet-list>
+</div>

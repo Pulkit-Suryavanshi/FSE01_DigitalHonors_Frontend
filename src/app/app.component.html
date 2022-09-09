@@ -1,0 +1,11 @@
+<main>
+    <nav class="navbar">
+        <label class="navbar-logo">Tweet-App</label>
+        <new-user-menu *ngIf="!loggedInStatus"></new-user-menu>
+        <logged-in-menu *ngIf="loggedInStatus == true" [username]="appUsername"></logged-in-menu>
+    </nav>
+    <div class="container">
+        <router-outlet>
+        </router-outlet>
+    </div>
+</main>

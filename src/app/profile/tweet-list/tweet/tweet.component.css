@@ -1,0 +1,41 @@
+.tweet{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 5rem auto 2rem auto;
+    border: 1px solid var(--clr-form-control-border);
+    border-radius: 0.5rem;
+    width: 40vw;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+.tweet-header{
+    display: flex;
+    justify-content: space-between;
+}
+.edit-btn{
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 0.2rem;
+    height: max-content;
+    margin: 0 0.3rem;
+}
+.tweet-header,.content,.likes{
+    grid-column: 1 / 3;
+    border-bottom: 1px solid var(--clr-form-control-border);
+    padding: 0.3rem;
+}
+.like,.reply,.show-replies{
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+    color: var(--clr-primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+.like{
+    border-right: 1px solid var(--clr-form-control-border);
+}
+reply-form,.show-replies,reply-list{
+    border-top: 1px solid var(--clr-form-control-border);
+    grid-column: 1 / 3;
+}

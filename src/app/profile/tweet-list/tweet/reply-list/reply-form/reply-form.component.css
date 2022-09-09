@@ -1,0 +1,17 @@
+.reply-form{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 1rem;
+}
+.content{
+    grid-column: 1 / 2;
+    resize: none;
+    height: 3rem;
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+}
+.submit{
+    grid-column: 2 / 3;
+    justify-self: center;
+    height: max-content;
+}

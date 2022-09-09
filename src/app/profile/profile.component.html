@@ -1,0 +1,8 @@
+<loader *ngIf="isLoading"></loader>
+<div *ngIf="!isLoading">
+<user [user]="user"></user>
+<hr>
+<tweet-form [action]="'Post'" [username]="user?.['userName']" *ngIf="user?.['userName'] == loggedInUser['userName']"></tweet-form>
+<h2>Tweets by {{ user?.['userName'] }}</h2>
+<tweet-list [tweets]="tweets"></tweet-list>
+</div>

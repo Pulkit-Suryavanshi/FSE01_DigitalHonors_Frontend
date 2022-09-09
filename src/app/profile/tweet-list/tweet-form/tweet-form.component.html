@@ -1,0 +1,7 @@
+<form #tweetForm="ngForm" class="tweet-form" (ngSubmit)="action == 'Post'? postTweet(tweetForm) : updateTweet(tweetForm)" >
+    <h2 class="action">{{ action }} Tweet</h2>
+    <textarea name="content" class="content form-control" id="" placeholder="Say something..." [ngModel]="content" required></textarea>
+    <input type="hidden" [ngModel]="username" name="createdBy" />
+    <input type="hidden" [ngModel]="tweetId" name="tweetId" />
+    <button class="btn btn-primary text-accent submit" [disabled]="!tweetForm.valid">{{ action }}</button>
+</form>

@@ -1,0 +1,41 @@
+.loader{
+    position: relative;
+    margin: auto;
+    width: max-content;
+}
+.plane{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 3rem;
+    animation: loading 1s ease-in infinite;
+}
+.plane::before{
+    content: '';
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 100%;
+    background-color: var(--clr-primary);
+    position: absolute;
+}
+#plane1{
+    animation-delay: 0.3s;
+}
+#plane2{
+    animation-delay: 0.4s;
+}
+#plane3{
+    animation-delay: 0.5s;
+}
+#plane4{
+    animation-delay: 0.6s;
+}
+@keyframes loading {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
