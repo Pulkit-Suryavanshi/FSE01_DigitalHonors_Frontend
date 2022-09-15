@@ -14,6 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
   loggedInStatus: boolean = false;
   appUsername: string = '';
   constructor(private loginService: LoginService){
+    console.log("checking log");
   }
   ngOnInit(): void {
     this.userSubscription = this.loginService.loggedInUser
