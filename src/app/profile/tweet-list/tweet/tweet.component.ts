@@ -3,6 +3,7 @@ import { LoginService } from 'src/app/login.service';
 import { ProfileService } from '../../profile.service';
 import { ReplyService } from './reply-list/reply/reply.service';
 import { TweetService } from './tweet.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tweet',
@@ -19,7 +20,8 @@ export class TweetComponent implements OnInit {
   constructor(private replyService: ReplyService,
     private tweetService: TweetService, 
     private profileService: ProfileService, 
-    private loginService: LoginService) { }
+    private loginService: LoginService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.replyService.replies
@@ -58,5 +60,8 @@ export class TweetComponent implements OnInit {
             })
         }
       });
+      this.router.navigateByUrl('/profile/:username', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/timeline/:username']);
+    }); 
   }
 }

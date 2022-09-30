@@ -5,6 +5,7 @@ import { Injectable } from "@angular/core";
 export class TweetService{
     tweets: Array<any> = [];
     baseUrl: string = 'https://localhost:44311/api/v1.0/tweets';
+    // baseUrl: string = 'api/api/v1.0/tweets'
     constructor(private http: HttpClient){
 
     }

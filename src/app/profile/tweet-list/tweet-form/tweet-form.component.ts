@@ -43,6 +43,10 @@ export class TweetFormComponent implements OnInit {
           this.profileService.addTweet(addedTweet)
         }
       });
+      //for refreshing the tweet list component: going to another component then back to same
+      this.router.navigateByUrl('/profile/:username', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/timeline/:username']);
+    }); 
   }
   updateTweet(formData:NgForm){
     this.tweetService.editTweet(formData.value)

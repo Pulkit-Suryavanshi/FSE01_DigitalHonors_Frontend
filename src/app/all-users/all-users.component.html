@@ -1,0 +1,38 @@
+<p><em><b>All the Users Registered on the site are:</b></em> </p>
+<br/>
+<div >
+    <ol>
+     <ng-container *ngFor="let user of AllUsers let i=index">
+        <li> Firstname: {{user?.['firstName']}}</li>
+        <ul>
+            <li> Lastname: {{user?.['lastName']}}</li>
+            <li> Email: {{user?.['email']}}</li>
+            <li> UserName: {{user?.['userName']}}</li>
+            <li> Contact Number: {{user?.['contactNo']}}</li>
+        </ul>
+        <hr/>
+     </ng-container>    
+    </ol>
+  </div>
+
+<!-- <div class="tweet">
+    <div class="tweet-header">
+        <p class="published-by">
+            Tweeted by <i class="arrow-right"></i> 
+            <a [routerLink]="['/profile', tweet?.['createdBy']]">{{ tweet?.['createdBy'] }}</a>
+        </p>
+        <div *ngIf="authUser?.['username'] == tweet?.['createdBy']">
+            <a class="btn btn-primary text-accent edit-btn" [routerLink]="['/tweet', tweet?.['id'], 'edit']">Edit</a>
+            <a class="btn btn-primary text-accent edit-btn" (click)="deleteTweet(tweet)" >Delete</a>
+        </div>
+    </div>
+    <h3 class="content">{{ tweet?.['content'] }}</h3>
+    <label class="likes">Likes - {{ tweet?.['likes'] }}</label>
+    <a class="like" (click)="likeTweet()">Like</a>
+    <a class="reply" (click)="showReplyForm = !showReplyForm">Reply</a>
+    <reply-form *ngIf="showReplyForm" [tweetId]="tweet?.['id']" (replyAdded)="onReplyAdded()"></reply-form>
+    <a class="show-replies" (click)="loadReplies()">
+        {{ !showAllReplies ? 'Show replies to this post' : 'Hide replies' }} <i [ngClass]="!showAllReplies ? 'arrow-bottom' : 'arrow-top'"></i>
+    </a>
+    <reply-list *ngIf="showAllReplies" [tweetId]="tweet?.['id']" [replies]="replies"></reply-list>
+</div> -->

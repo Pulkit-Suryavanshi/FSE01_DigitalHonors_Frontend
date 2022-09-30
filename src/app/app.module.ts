@@ -25,6 +25,7 @@ import { TweetService } from './profile/tweet-list/tweet/tweet.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileService } from './profile/profile.service';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { AllUsersComponent } from './all-users/all-users.component';
 
 const appRoutes: Routes = [
   { path:'', component: LoginFormComponent },
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   { path:'profile/:username', canActivate: [AuthGuard], component: ProfileComponent},
   { path:'timeline/:username', canActivate: [AuthGuard], component: TimelineComponent},
   { path:'tweet/:tweetId/:action', canActivate: [AuthGuard], component: TweetFormComponent},
+  { path:'allusers/:username', canActivate: [AuthGuard], component: AllUsersComponent},
   { path:':action', component: LoginFormComponent }
 ]
 
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     ReplyComponent,
     ReplyListComponent,
     ReplyFormComponent,
-    LoaderComponent
+    LoaderComponent,
+    AllUsersComponent
   ],
   imports: [
     BrowserModule,
