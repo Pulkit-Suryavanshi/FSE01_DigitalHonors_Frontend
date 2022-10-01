@@ -1,0 +1,6 @@
+{
+    "/api": {
+    "target": "https://comtweetapp20220929234140.azurewebsites.net",
+    "secure": false
+    }
+}

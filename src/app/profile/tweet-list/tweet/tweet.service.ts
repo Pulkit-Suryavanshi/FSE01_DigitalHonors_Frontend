@@ -4,8 +4,10 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class TweetService{
     tweets: Array<any> = [];
-    baseUrl: string = 'https://localhost:44311/api/v1.0/tweets';
+    // baseUrl: string = 'https://localhost:44311/api/v1.0/tweets';
     // baseUrl: string = 'api/api/v1.0/tweets'
+    //https://comtweetapp20220929234140.azurewebsites.net //hosted api app service azure
+    baseUrl: string = 'https://comtweetapp20220929234140.azurewebsites.net/api/v1.0/tweets'
     constructor(private http: HttpClient){
 
     }
